@@ -7,32 +7,86 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btndiv{
+  margin-bottom: 52px;
+  margin-left: 966px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.center{
+
+  margin-left: auto;
+    margin-right: auto;
+    height: 433px;
+
 }
 
-.App-link {
-  color: #61dafb;
+ .removebtn{
+height: 19px;  
 }
+  
+  .Addbtn{
+    margin-right: 359px;
+    margin-top: 40px;
+  }
+  .memberss{
+   display: flex;
+   justify-content: space-between;
+  }
+  #standard-basic{
+    margin-right: 10px;
+   
+  }
+ 
+  label{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+  }
+  
+ 
+ .disp{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 10px;
+ }
+ .lab{
+width: 55px;
+ }
+ .btnbtn{
+   margin-right:20px;
+ }
+ Link{
+   outline: none;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+ .MuiButtonBase-root.MuiButton-root.MuiButton-contained.btndiv.MuiButton-containedPrimary.MuiButton-containedSizeSmall.MuiButton-sizeSmall
+ {
+   margin-top:20px;
+  margin-left: 1200px;
+  margin-bottom: 30px;
+ }
+ .MuiButtonBase-root.MuiButton-root.MuiButton-contained.btnbtn.MuiButton-containedSizeSmall.MuiButton-sizeSmall
+ {
+  margin-left: 355px;
+ }
+ .MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedSizeSmall.MuiButton-sizeSmall{
+  margin-left: 20px;
+ }
+ .tablediv
+ {
+   margin-left: 150px;
+   margin-top:80px;
+   margin-right: 50px;
+   width: 1000px;
+
+ }
+ .MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit{
+  margin-left: 20px;
+ }
+ .MuiTableCell-alignRight{
+  text-align: center !important;
+
+ }
+
+
