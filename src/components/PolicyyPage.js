@@ -44,15 +44,21 @@ export default class  Example extends Component{
     //     data.splice(i, 1);
     //     this.setState({ data });
     //   }
-
+     deleteItem = itemId => {
+         console.log("this is policy item",itemId)
+        const data = this.state.data.filter(item => item.Policy_Id !== itemId);
+        this.setState({ data: data });
+      };
       render(props) {
         const { classes } = this.props;
 
-         const deleteItem=(i)=>{
-            const { data } = this.state;
-            data.splice(i, 1);
-            this.setState({ data });
-          }
+        //  const deleteItem=(i)=>{
+        //     const { data } = this.state;
+        //     data.splice(i, 1);
+        //     this.setState({ data });
+        //   }
+        
+       
         
          this.tableIcons = {
 
@@ -97,11 +103,12 @@ export default class  Example extends Component{
             //   lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
             // },
           ]}
-          data={[
-            { Policy_Id: 23, Customer: 'Albert', Contact_Number: 9876767678,Reneval_Date: 6-3-2020,Premium_Amount:600000 },
-            { Policy_Id:77, Customer: 'Stephan', Contact_Number: 7685674532,Reneval_Date: 2-3-2020,Premium_Amount:450000 },
-            { Policy_Id: 26, Customer: 'Thomas', Contact_Number: 8234546897,Reneval_Date: 3-3-2020,Premium_Amount:500000 },
-          ]}
+          data={this.state.data}
+        //   data={[
+        //     { Policy_Id: 23, Customer: 'Albert', Contact_Number: 9876767678,Reneval_Date: 6-3-2020,Premium_Amount:600000 },
+        //     { Policy_Id:77, Customer: 'Stephan', Contact_Number: 7685674532,Reneval_Date: 2-3-2020,Premium_Amount:450000 },
+        //     { Policy_Id: 26, Customer: 'Thomas', Contact_Number: 8234546897,Reneval_Date: 3-3-2020,Premium_Amount:500000 },
+        //   ]}
           actions={[
               {
               
@@ -138,7 +145,7 @@ export default class  Example extends Component{
               icon: 'delete',
               tooltip: 'Delete User',
              
-              onClick:{deleteItem},
+              onClick:(event, rowData) => this.deleteItem(rowData.Policy_Id),
             })
           ]}
           options={{
